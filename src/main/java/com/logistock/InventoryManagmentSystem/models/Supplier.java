@@ -19,6 +19,9 @@ public class Supplier {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name is required")
+    private String name;
+
     @NotBlank(message = "ContactInfo is required")
     private String contactInfo;
 

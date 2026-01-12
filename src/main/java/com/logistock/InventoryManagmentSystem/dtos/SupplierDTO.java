@@ -2,7 +2,6 @@ package com.logistock.InventoryManagmentSystem.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +16,10 @@ public class SupplierDTO {
 
     private Long id;
 
+    @NotBlank(message = "Name is required")
+    private String name;
+
+    @NotBlank(message = "contactInfo is required")
     private String contactInfo;
 
     private String address;

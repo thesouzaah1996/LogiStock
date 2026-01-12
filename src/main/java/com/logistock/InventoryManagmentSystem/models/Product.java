@@ -28,19 +28,17 @@ public class Product {
     private String name;
 
     @Column(unique = true)
-    @NotBlank(message = "Sku is required")
+    @NotBlank(message = "SKU is required")
     private String sku;
 
-    @Positive(message = "product price must be positive value")
+    @Positive(message = "product price must be a positive value")
     private BigDecimal price;
 
     @Min(value = 0, message = "stock quantity cannot be negative")
     private Integer stockQuantity;
 
     private String description;
-
     private LocalDateTime expiryDate;
-
     private String imageUrl;
 
     private final LocalDateTime createdAt = LocalDateTime.now();
@@ -48,6 +46,7 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
 
     @Override
     public String toString() {
@@ -61,7 +60,7 @@ public class Product {
                 ", expiryDate=" + expiryDate +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", createdAt=" + createdAt +
-                ", category=" + category +
                 '}';
     }
 }
+
