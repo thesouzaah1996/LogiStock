@@ -1,5 +1,6 @@
 package com.logistock.InventoryManagmentSystem.models;
 
+
 import com.logistock.InventoryManagmentSystem.enums.TransactionStatus;
 import com.logistock.InventoryManagmentSystem.enums.TransactionType;
 import jakarta.persistence.*;
@@ -31,13 +32,13 @@ public class Transaction {
     private TransactionType transactionType;
 
     @Enumerated(EnumType.STRING)
-    private TransactionStatus transactionStatus;
+    private TransactionStatus status;
 
     private String description;
 
     private String note;
 
-    private final LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     private LocalDateTime updateAt;
 
@@ -60,7 +61,7 @@ public class Transaction {
                 ", totalProducts=" + totalProducts +
                 ", totalPrice=" + totalPrice +
                 ", transactionType=" + transactionType +
-                ", transactionStatus=" + transactionStatus +
+                ", status=" + status +
                 ", description='" + description + '\'' +
                 ", note='" + note + '\'' +
                 ", createdAt=" + createdAt +

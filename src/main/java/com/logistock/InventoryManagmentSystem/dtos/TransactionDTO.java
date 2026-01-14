@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.logistock.InventoryManagmentSystem.enums.TransactionStatus;
 import com.logistock.InventoryManagmentSystem.enums.TransactionType;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -28,7 +26,7 @@ public class TransactionDTO {
 
     private TransactionType transactionType;
 
-    private TransactionStatus transactionStatus;
+    private TransactionStatus status;
 
     private String description;
 
@@ -43,4 +41,6 @@ public class TransactionDTO {
     private UserDTO user;
 
     private SupplierDTO supplier;
+
+
 }

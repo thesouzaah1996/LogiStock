@@ -1,8 +1,6 @@
 package com.logistock.InventoryManagmentSystem.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.logistock.InventoryManagmentSystem.enums.UserRole;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
